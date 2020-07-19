@@ -45,7 +45,23 @@ A Aframe é uma ferramenta criada para desenvolver softwares com experiências e
             trailingComma: 'all',
             allowParens: 'avoid',
         };
+    ```  
+    6) Podemos agora configurar o ESLint e Prettier. Criaremos um arquivo de nome .eslintignore, que irá conter os arquivos onde o ESLint não serão visualizados. Escreva no arquivo eslintignore, os seguintes trechos:
+     ```Arquivo eslintignore
+      **/*.js
+        node_modules
+        build
      ```   
+     7) Iremos editar agora o arquivo .eslintrc.json onde iremos alterar as seguintes regras do extends:
+     ```Regras que irão no .eslintrc.json
+        "extends": [
+            "plugin:react/recommended",
+            "airbnb",
+            "plugin:@typescript-eslint/recommended",
+            "prettier/@typescript-eslint",
+            "plugin:prettier/recommended"
+        ],
+     ```  
 
 ### Adicionando o Styled-Components
 Para deixar nossos componentes mais bonitinhos, usaremos o Styled Component. Abaixos os passos para adicionar o Styled Component em nossa aplicação.
